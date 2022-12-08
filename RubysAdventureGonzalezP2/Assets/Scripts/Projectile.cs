@@ -14,7 +14,7 @@ public class Projectile : MonoBehaviour
 
     public void Launch(Vector2 direction, float force)
     {
-        rigidbody2d.AddForce(direction * force);
+        rigidbody2D.AddForce(direction * force);
     }
 
     // Update is called once per frame

@@ -23,6 +23,12 @@ public class EnemyController : MonoBehaviour
 
     void Update()
     {
+        //remember ! inverse the test, so if broken is true !broken will be false and return won’t be executed.
+        if (!broken)
+        {
+            return;
+        }
+
         timer -= Time.deltaTime;
 
         if (timer < 0)
