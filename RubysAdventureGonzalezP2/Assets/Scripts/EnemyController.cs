@@ -11,6 +11,7 @@ public class EnemyController : MonoBehaviour
     Rigidbody2D rigidbody2D;
     float timer;
     int direction = 1;
+    bool broken = true;
 
     Animator animator;
     // Start is called before the first frame update
@@ -41,6 +42,11 @@ public class EnemyController : MonoBehaviour
     void FixedUpdate()
     {
         Vector2 position = rigidbody2D.position;
+
+        if(!broken)
+        {
+            return;
+        }
 
         if (vertical)
         {
